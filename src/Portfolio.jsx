@@ -54,6 +54,14 @@ export default function Portfolio() {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const handlePopState = () => {
+      setSelectedProject(null);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   const projects = [
     {
       title: 'Canteen Rush AI',
@@ -321,7 +329,12 @@ export default function Portfolio() {
           <button 
             className="project-page-back" 
             onClick={() => {
-              setSelectedProject(null);
+              if (window.history.state && window.history.state.project) {
+                window.history.back();
+              } else {
+                setSelectedProject(null);
+                window.history.replaceState(null, '', window.location.pathname);
+              }
               window.scrollTo(0, 0);
             }}
           >
@@ -996,6 +1009,7 @@ export default function Portfolio() {
                 key={index} 
                 className={`project-card reveal reveal-delay-${index + 1} ${workVis ? 'visible' : ''}`}
                 onClick={() => {
+                  window.history.pushState({ project: project.title }, '', `#${project.title.replace(/\s+/g, '-').toLowerCase()}`);
                   setSelectedProject(project);
                   window.scrollTo(0, 0);
                 }}
