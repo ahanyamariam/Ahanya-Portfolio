@@ -693,11 +693,33 @@ export default function Portfolio() {
           transform: translateY(0);
         }
 
-        /* ── Experience ────────────────────────────── */
+        /* ── Experience & Tools ────────────────────── */
         .experience-section {
           padding: 140px 40px;
-          max-width: 900px;
+          max-width: 1000px;
           margin: 0 auto;
+        }
+        .bottom-grid {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 120px;
+        }
+        .tools-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+        }
+        .tools-item {
+          padding: 16px 0;
+          border-bottom: 1px solid rgba(0,0,0,0.06);
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 15px;
+          color: #555;
+        }
+        .tools-item:last-child {
+          border-bottom: none;
         }
         .experience-heading {
           font-family: 'Playfair Display', serif;
@@ -922,6 +944,7 @@ export default function Portfolio() {
         /* ── Responsive ────────────────────────────── */
         @media (max-width: 900px) {
           .projects-grid { grid-template-columns: 1fr; gap: 24px; }
+          .bottom-grid { grid-template-columns: 1fr; gap: 64px; }
           .hero { padding: 140px 24px 100px; }
           .hero-name { font-size: 38px; }
           .hero-bio { font-size: 24px; }
@@ -1045,28 +1068,50 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ── Experience ─────────────────────────── */}
+      {/* ── Experience & Tools ────────────────────── */}
       <section className="experience-section" ref={expRef}>
-        <div className={`reveal ${expVis ? 'visible' : ''}`}>
-          <p className="section-label section-label--dark">EXPERIENCE</p>
-        
-        </div>
-
-        <div className="experience-list">
-          {experiences.map((exp, index) => (
-            <div 
-              key={index}
-              className={`experience-item reveal reveal-delay-${index + 1} ${expVis ? 'visible' : ''}`}
-            >
-              <div className="experience-year">{exp.year}</div>
-              <div className="experience-details">
-                <h3 className="experience-role">
-                  {exp.role} <span>at</span> {exp.company}
-                </h3>
-                <p className="experience-desc">{exp.description}</p>
-              </div>
+        <div className="bottom-grid">
+          
+          <div>
+            <div className={`reveal ${expVis ? 'visible' : ''}`}>
+              <p className="section-label section-label--dark">EXPERIENCE</p>
             </div>
-          ))}
+
+            <div className="experience-list">
+              {experiences.map((exp, index) => (
+                <div 
+                  key={index}
+                  className={`experience-item reveal reveal-delay-${index + 1} ${expVis ? 'visible' : ''}`}
+                >
+                  <div className="experience-year">{exp.year}</div>
+                  <div className="experience-details">
+                    <h3 className="experience-role">
+                      {exp.role} <span>at</span> {exp.company}
+                    </h3>
+                    <p className="experience-desc">{exp.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className={`reveal reveal-delay-2 ${expVis ? 'visible' : ''}`}>
+              <p className="section-label section-label--dark">TOOLS</p>
+            </div>
+            <ul className={`tools-list reveal reveal-delay-3 ${expVis ? 'visible' : ''}`}>
+              <li className="tools-item">React</li>
+              <li className="tools-item">HTML, CSS, JavaScript</li>
+              <li className="tools-item">Electron</li>
+              <li className="tools-item">Flutter, Dart</li>
+              <li className="tools-item">Go</li>
+              <li className="tools-item">Firebase</li>
+              <li className="tools-item">PostgreSQL</li>
+              <li className="tools-item">Supabase</li>
+              <li className="tools-item">MongoDB</li>
+            </ul>
+          </div>
+
         </div>
       </section>
 
