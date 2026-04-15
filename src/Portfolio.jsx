@@ -966,7 +966,7 @@ export default function Portfolio() {
         
         <div className={`reveal reveal-delay-1 ${heroVis ? 'visible' : ''}`}>
           <p className="hero-bio">
-            {'Hey there! I\'m Ahanya, a passionate software developer based in '}
+            {'Hey there! I\'m Ahanya, an MCA student with a passion for software development based in '}
             <span className="location-pill">
               <MapPin size={14} />
               Bangalore, India
