@@ -57,24 +57,24 @@ export default function Portfolio() {
   const projects = [
     {
       title: 'Canteen Rush AI',
-      image: '/src/assets/pictures/canteen-rush.png',
+      image: '/assets/pictures/canteen-rush.png',
       description: 'AI-powered campus food ordering system.',
       details: 'Canteen Rush AI is an AI-powered campus food ordering system that eliminates queues with predictive timing and real-time vendor coordination.',
       repoUrl: 'https://github.com/ahanyamariam/CANTEEN-RUSH-AI.git',
       tags: ['React', 'Node.js', 'MongoDB','Google Gemini API', 'Socket.io'],
-      stepsImage: '/src/assets/pictures/steps.png',
+      stepsImage: '/assets/pictures/steps.png',
       media: [
         {
-          src: '/src/assets/videos/canteen-demo.mp4',
+          src: '/assets/videos/canteen-demo.mp4',
           desc: 'A complete walkthrough of the student experience, featuring an AI chatbot interface to effortlessly place and track food orders.'
         },
         {
-          src: '/src/assets/videos/chatbot.mp4',
+          src: '/assets/videos/chatbot.mp4',
           desc: 'An intelligent AI assistant that allows students to rapidly place customized orders using natural language without navigating complex menus.',
           isLoop: true
         },
         {
-          src: '/src/assets/videos/vendor.mp4',
+          src: '/assets/videos/vendor.mp4',
           desc: 'The dedicated vendor dashboard synchronizes incoming orders in real-time, helping kitchen staff organize and prioritize food preparation during peak campus hours.'
         }
       ],
@@ -82,7 +82,7 @@ export default function Portfolio() {
     },
     {
       title: 'Nurdle',
-      image: '/src/assets/pictures/nurdle.png',
+      image: '/assets/pictures/nurdle.png',
       description: 'A daily number-guessing game inspired by Wordle',
       details: 'A daily number-guessing game inspired by Wordle. Instead of words, you guess a 3-digit number with all unique digits. After each guess, colored feedback dots tell you how many digits are correct, misplaced, or absent -- but not which ones.',
       repoUrl: 'https://github.com/Anirudh-Gonnuri/Nurdle.git',
@@ -91,7 +91,7 @@ export default function Portfolio() {
     },
     {
       title: 'Inboxie',
-      image: '/src/assets/pictures/inboxie.png',
+      image: '/assets/pictures/inboxie.png',
       pageImageStyle: { maxWidth: '400px', margin: '0 auto 56px auto' },
       description: 'An Action-Intelligent Email Client for Reducing Missed Follow-ups and Deadlines.',
       details: 'Inboxie is a multi-provider email client that augments traditional email interfaces with an action-intelligence layer designed to reduce missed follow-ups, overlooked requests, and unmanaged deadlines. Rather than prioritizing chronological ordering, the system surfaces emails based on inferred intent, urgency, and required user action. The application emphasizes explainability, user control, and privacy-aware processing, enabling users to understand why an email is flagged and how prioritization decisions are made.',
@@ -99,16 +99,16 @@ export default function Portfolio() {
       tags: ['Flutter/Dart', 'Firebase', 'Sqlite'],
       media: [
         {
-          src: '/src/assets/videos/inboxie.mp4',
+          src: '/assets/videos/inboxie.mp4',
           isLoop: true,
           style: { maxWidth: '320px', margin: '0 auto' },
           desc: 'Inboxie identifies emails that require user action using a blend of rule-based and AI-assisted intent detection. By organizing messages into human-readable intents—such as "needs reply" or "waiting on others"—it helps prevent missed replies, follow-ups, and time-sensitive tasks. The application presents its prioritization decisions in an explainable and transparent manner, offering customizable labels and buckets that adapt to individual user workflows, all while maintaining strong privacy guarantees through configurable data storage modes.'
         },
         {
           images: [
-            '/src/assets/pictures/inboxie-home.jpeg',
-            '/src/assets/pictures/profile.png',
-            '/src/assets/pictures/ai.png'
+            '/assets/pictures/inboxie-home.jpeg',
+            '/assets/pictures/profile.png',
+            '/assets/pictures/ai.png'
           ],
           desc: 'A modern interface showing the unified homepage, configurable user profiles, and AI intent detection overlays that prioritize emails effectively.'
         }
@@ -117,26 +117,26 @@ export default function Portfolio() {
     },
     {
       title: 'Hygieia',
-      image: '/src/assets/pictures/hygieia.png',
+      image: '/assets/pictures/hygieia.png',
       description: 'An all in one healthcare web platform.',
       details: 'Hygieia is an advanced healthcare platform designed to seamlessly connect patients and medical professionals through a responsive, modern interface enriched with 3D design elements. The entire ecosystem is safeguarded by strict JWT-based authentication, ensuring uncompromising security and privacy across desktop, tablet, and mobile devices.',
       repoUrl: 'https://github.com/ahanyamariam/Hygieia-enhanced.git',
       tags: ['React', 'Node.js', 'MongoDB'],
       media: [
         {
-          src: '/src/assets/videos/intro.mp4',
+          src: '/assets/videos/intro.mp4',
           desc: 'For healthcare providers, the platform offers a robust dashboard to efficiently manage appointments, patient records, generate digital prescriptions, and track financial earnings.'
         },
         {
-          src: '/src/assets/videos/sign_up.mp4',
+          src: '/assets/videos/sign_up.mp4',
           desc: 'Patients benefit from an intuitive appointment scheduling system with seamless calendar integration, backed by real-time chat support for continuous communication.'
         },
         {
-          src: '/src/assets/videos/doctor-pharmacy.mp4',
+          src: '/assets/videos/doctor-pharmacy.mp4',
           desc: 'A comprehensive suite of tools empowers individuals to securely maintain their medical history while providing access to an integrated online pharmacy for convenient home delivery of medications.'
         },
         {
-          src: '/src/assets/videos/labtest.mp4',
+          src: '/assets/videos/labtest.mp4',
           desc: 'The platform streamlines diagnostic care by allowing patients to easily book lab tests and receive secure digital reports directly through their personalized health portal.'
         }
       ],
@@ -144,24 +144,24 @@ export default function Portfolio() {
     },
     {
       title: 'Echo',
-      image: '/src/assets/pictures/echo.png',
+      image: '/assets/pictures/echo.png',
       description: 'A modern, real-time voice and text chat application.',
       details: 'Echo is a real-time web-based messaging application built using Go and React. It features secure user authentication, persistent chat rooms, and seamless voice communication powered by WebSockets, delivering a smooth and responsive experience for both text and voice interactions.',
       repoUrl: 'https://github.com/ahanyamariam/Echo.git',
       tags: ['Go','React', 'WebSockets', 'Node.js'],
       media: [
         {
-          src: '/src/assets/videos/echo-intro.mp4',
+          src: '/assets/videos/echo-intro.mp4',
           desc: 'A seamless onboarding experience introducing users to the real-time voice and text chat features built with Go and React.',
           isLoop: true
         },
         {
-          src: '/src/assets/videos/echo.mp4',
+          src: '/assets/videos/echo.mp4',
           desc: 'Exploring the persistent chat rooms and low-latency communication powered securely by WebSockets.',
           isLoop: true
         },
         {
-          src: '/src/assets/videos/disappearing-msg.mp4',
+          src: '/assets/videos/disappearing-msg.mp4',
           desc: 'An automated disappearing message feature that enhances privacy by automatically removing messages after a set timeframe.',
           isLoop: true
         }
@@ -170,8 +170,8 @@ export default function Portfolio() {
     },
     {
       title: 'Sticky',
-      image: '/src/assets/pictures/sticky.png',
-      pageImage: '/src/assets/videos/sticky.mp4',
+      image: '/assets/pictures/sticky.png',
+      pageImage: '/assets/videos/sticky.mp4',
       description: 'A retro pixel-art sticky notes desktop app.',
       details: 'A retro pixel-art sticky notes desktop app built with Electron, featuring draggable notes, pastel color themes, todo lists, sound effects, and local persistence',
       repoUrl: 'https://github.com/ahanyamariam/Sticky.git',
@@ -941,7 +941,7 @@ export default function Portfolio() {
         <div className={`reveal ${heroVis ? 'visible' : ''}`}>
           <div className="hero-profile">
             <img 
-              src="/src/assets/pictures/ahanya.jpeg"
+              src="/assets/pictures/ahanya.jpeg"
               alt="Profile"
               className="hero-avatar"
             />
