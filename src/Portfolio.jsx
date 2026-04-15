@@ -39,20 +39,26 @@ function useReveal(threshold = 0.15) {
   return [ref, visible];
 }
 
+/* ── Components ──────────────────────────────────────────────── */
+function LiveClock() {
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return <>{time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}</>;
+}
+
 /* ── Main Component ──────────────────────────────────────────── */
 export default function Portfolio() {
-  const [time, setTime] = useState(new Date());
   const [selectedProject, setSelectedProject] = useState(null);
 
   /* Reveal refs */
   const [heroRef, heroVis] = useReveal(0.1);
   const [workRef, workVis] = useReveal(0.08);
   const [expRef, expVis] = useReveal(0.1);
-
-  useEffect(() => {
-    const timer = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(timer);
-  }, []);
 
   useEffect(() => {
     const handlePopState = () => {
@@ -183,7 +189,7 @@ export default function Portfolio() {
       description: 'A retro pixel-art sticky notes desktop app.',
       details: 'A retro pixel-art sticky notes desktop app built with Electron, featuring draggable notes, pastel color themes, todo lists, sound effects, and local persistence',
       repoUrl: 'https://github.com/ahanyamariam/Sticky.git',
-      tags: ['React', 'Next.js', 'Tailwind CSS'],
+      tags: ['React','Electron', 'Next.js', 'Tailwind CSS'],
       hideLiveSite: true
     }
   ];
@@ -986,7 +992,7 @@ export default function Portfolio() {
           </div>
           <div className="mono" style={{ fontSize: 12, letterSpacing: '0.08em', color: '#999', display: 'flex', alignItems: 'center', gap: 8 }}>
             <Clock size={13} style={{ opacity: 0.6 }} />
-            {time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
+            <LiveClock />
           </div>
         </div>
       </header>
