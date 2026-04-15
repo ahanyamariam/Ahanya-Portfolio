@@ -139,19 +139,18 @@ export default function Portfolio() {
       media: [
         {
           src: '/assets/videos/intro.mp4',
-          desc: 'For healthcare providers, the platform offers a robust dashboard to efficiently manage appointments, patient records, generate digital prescriptions, and track financial earnings.'
+          desc: 'For healthcare providers, the platform offers a robust dashboard to efficiently manage appointments, patient records, generate digital prescriptions, and track financial earnings.',
+          isLoop: true
         },
         {
           src: '/assets/videos/sign_up.mp4',
-          desc: 'Patients benefit from an intuitive appointment scheduling system with seamless calendar integration, backed by real-time chat support for continuous communication.'
-        },
-        {
-          src: '/assets/videos/doctor-pharmacy.mp4',
-          desc: 'A comprehensive suite of tools empowers individuals to securely maintain their medical history while providing access to an integrated online pharmacy for convenient home delivery of medications.'
+          desc: 'Patients benefit from an intuitive appointment scheduling system with seamless calendar integration, backed by real-time chat support for continuous communication.',
+          isLoop: true
         },
         {
           src: '/assets/videos/labtest.mp4',
-          desc: 'The platform streamlines diagnostic care by allowing patients to easily book lab tests and receive secure digital reports directly through their personalized health portal.'
+          desc: 'The platform streamlines diagnostic care by allowing patients to easily book lab tests and receive secure digital reports directly through their personalized health portal.',
+          isLoop: true
         }
       ],
       hideLiveSite: true
