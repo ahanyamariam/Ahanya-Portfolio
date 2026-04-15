@@ -709,7 +709,7 @@ export default function Portfolio() {
           margin: 0;
           padding: 0;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          grid-template-columns: repeat(3, 1fr);
           gap: 20px;
         }
         .tools-item {
@@ -962,7 +962,8 @@ export default function Portfolio() {
         /* ── Responsive ────────────────────────────── */
         @media (max-width: 900px) {
           .projects-grid { grid-template-columns: 1fr; gap: 24px; }
-          .bottom-grid { grid-template-columns: 1fr; gap: 64px; }
+          .bottom-grid { gap: 64px; }
+          .tools-list { grid-template-columns: 1fr; }
           .hero { padding: 140px 24px 100px; }
           .hero-name { font-size: 38px; }
           .hero-bio { font-size: 24px; }
