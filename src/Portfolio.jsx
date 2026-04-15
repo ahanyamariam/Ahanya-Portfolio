@@ -22,21 +22,20 @@ const XTwitter = ({ size = 24, ...props }) => (
 
 /* ── Scroll-reveal hook ──────────────────────────────────────── */
 function useReveal(threshold = 0.15) {
-  const ref = useRef(null);
+  const [element, setElement] = useState(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    if (!element) return;
     const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.unobserve(el); } },
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.unobserve(element); } },
       { threshold }
     );
-    obs.observe(el);
+    obs.observe(element);
     return () => obs.disconnect();
-  }, [threshold]);
+  }, [threshold, element]);
 
-  return [ref, visible];
+  return [setElement, visible];
 }
 
 /* ── Components ──────────────────────────────────────────────── */
