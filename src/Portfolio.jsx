@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Mail, ExternalLink, Clock, MapPin, ArrowUpRight, X } from 'lucide-react';
+import { Mail, ExternalLink, Clock, MapPin, ArrowUpRight, X, LayoutTemplate, FileCode2, MonitorSmartphone, Smartphone, TerminalSquare, Flame, Database, DatabaseZap, Leaf } from 'lucide-react';
 
 /* ── Brand SVG Icons ─────────────────────────────────────────── */
 const Github = ({ size = 24, ...props }) => (
@@ -700,26 +700,44 @@ export default function Portfolio() {
           margin: 0 auto;
         }
         .bottom-grid {
-          display: grid;
-          grid-template-columns: 2fr 1fr;
+          display: flex;
+          flex-direction: column;
           gap: 120px;
         }
         .tools-list {
           list-style: none;
           margin: 0;
           padding: 0;
-          display: flex;
-          flex-direction: column;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 20px;
         }
         .tools-item {
-          padding: 16px 0;
-          border-bottom: 1px solid rgba(0,0,0,0.06);
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          padding: 20px 24px;
+          border-radius: 16px;
+          border: 1px solid rgba(0,0,0,0.06);
+          background: #fff;
           font-family: 'IBM Plex Mono', monospace;
           font-size: 15px;
-          color: #555;
+          color: #111;
+          transition: transform 0.25s, box-shadow 0.25s;
         }
-        .tools-item:last-child {
-          border-bottom: none;
+        .tools-item:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 12px 32px rgba(0,0,0,0.05);
+        }
+        .tools-icon-wrap {
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 10px;
+          background: #f8f8f8;
         }
         .experience-heading {
           font-family: 'Playfair Display', serif;
@@ -1100,15 +1118,42 @@ export default function Portfolio() {
               <p className="section-label section-label--dark">TOOLS</p>
             </div>
             <ul className={`tools-list reveal reveal-delay-3 ${expVis ? 'visible' : ''}`}>
-              <li className="tools-item">React</li>
-              <li className="tools-item">HTML, CSS, JavaScript</li>
-              <li className="tools-item">Electron</li>
-              <li className="tools-item">Flutter, Dart</li>
-              <li className="tools-item">Go</li>
-              <li className="tools-item">Firebase</li>
-              <li className="tools-item">PostgreSQL</li>
-              <li className="tools-item">Supabase</li>
-              <li className="tools-item">MongoDB</li>
+              <li className="tools-item">
+                <div className="tools-icon-wrap"><LayoutTemplate size={20} color="#61dafb" /></div>
+                React
+              </li>
+              <li className="tools-item">
+                <div className="tools-icon-wrap"><FileCode2 size={20} color="#e34f26" /></div>
+                HTML, CSS, JS
+              </li>
+              <li className="tools-item">
+                <div className="tools-icon-wrap"><MonitorSmartphone size={20} color="#9feaf9" /></div>
+                Electron
+              </li>
+              <li className="tools-item">
+                <div className="tools-icon-wrap"><Smartphone size={20} color="#02569b" /></div>
+                Flutter, Dart
+              </li>
+              <li className="tools-item">
+                <div className="tools-icon-wrap"><TerminalSquare size={20} color="#00add8" /></div>
+                Go
+              </li>
+              <li className="tools-item">
+                <div className="tools-icon-wrap"><Flame size={20} color="#ffca28" /></div>
+                Firebase
+              </li>
+              <li className="tools-item">
+                <div className="tools-icon-wrap"><Database size={20} color="#336791" /></div>
+                PostgreSQL
+              </li>
+              <li className="tools-item">
+                <div className="tools-icon-wrap"><DatabaseZap size={20} color="#3ecf8e" /></div>
+                Supabase
+              </li>
+              <li className="tools-item">
+                <div className="tools-icon-wrap"><Leaf size={20} color="#47a248" /></div>
+                MongoDB
+              </li>
             </ul>
           </div>
 
