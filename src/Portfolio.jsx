@@ -173,7 +173,7 @@ export default function Portfolio() {
           isLoop: true
         },
         {
-          src: '/assets/videos/disappearing-msg.mp4',
+          src: '/assets/videos/msg.mp4',
           desc: 'An automated disappearing message feature that enhances privacy by automatically removing messages after a set timeframe.',
           isLoop: true
         }
