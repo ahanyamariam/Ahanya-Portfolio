@@ -112,7 +112,7 @@ export default function Portfolio() {
       tags: ['Flutter/Dart', 'Firebase', 'Sqlite'],
       media: [
         {
-          src: '/assets/videos/inboxie.mp4',
+          src: '/assets/videos/inboxie-full.mp4',
           isLoop: true,
           style: { maxWidth: '320px', margin: '0 auto' },
           desc: 'Inboxie identifies emails that require user action using a blend of rule-based and AI-assisted intent detection. By organizing messages into human-readable intents—such as "needs reply" or "waiting on others"—it helps prevent missed replies, follow-ups, and time-sensitive tasks. The application presents its prioritization decisions in an explainable and transparent manner, offering customizable labels and buckets that adapt to individual user workflows, all while maintaining strong privacy guarantees through configurable data storage modes.'
