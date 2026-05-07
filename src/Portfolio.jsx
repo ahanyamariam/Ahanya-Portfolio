@@ -197,7 +197,8 @@ export default function Portfolio() {
       year: '2026',
       role: 'Web developer and UI/UX designer',
       company: 'Grace Engineering LLC ',
-      description: 'Handling the full-cycle web development for Grace Engineering LLC, from the initial UI/UX design and architecture to final technical deployment. I am responsible for building a high-performance platform that bridges their industrial expertise with a modern, user-centric experience.'
+      description: 'Handling the full-cycle web development for Grace Engineering LLC, from the initial UI/UX design and architecture to final technical deployment. I am responsible for building a high-performance platform that bridges their industrial expertise with a modern, user-centric experience.',
+      link: 'https://graceengineeringllc.com'
     },
     {
       year: '2023 — 2025',
@@ -810,6 +811,22 @@ export default function Portfolio() {
           color: #777;
           line-height: 1.7;
         }
+        .experience-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          margin-top: 12px;
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 12px;
+          color: #1a1a1a;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.2s ease;
+        }
+        .experience-link:hover {
+          color: #666;
+          transform: translateX(4px);
+        }
 
         /* ── Footer ────────────────────────────────── */
         .footer {
@@ -1118,6 +1135,11 @@ export default function Portfolio() {
                       {exp.role} <span>at</span> {exp.company}
                     </h3>
                     <p className="experience-desc">{exp.description}</p>
+                    {exp.link && (
+                      <a href={exp.link} target="_blank" rel="noopener noreferrer" className="experience-link">
+                        Visit Website <ArrowUpRight size={14} />
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
