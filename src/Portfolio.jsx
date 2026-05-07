@@ -198,7 +198,7 @@ export default function Portfolio() {
       role: 'Web developer and UI/UX designer',
       company: 'Grace Engineering LLC ',
       description: 'Handling the full-cycle web development for Grace Engineering LLC, from the initial UI/UX design and architecture to final technical deployment. I am responsible for building a high-performance platform that bridges their industrial expertise with a modern, user-centric experience.',
-      link: 'https://graceengineeringllc.com'
+      link: 'https://graceoman.com/'
     },
     {
       year: '2023 — 2025',
