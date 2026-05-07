@@ -194,6 +194,12 @@ export default function Portfolio() {
 
   const experiences = [
     {
+      year: '2026',
+      role: 'Web developer and UI/UX designer',
+      company: 'Grace Engineering LLC ',
+      description: 'Handling the full-cycle web development for Grace Engineering LLC, from the initial UI/UX design and architecture to final technical deployment. I am responsible for building a high-performance platform that bridges their industrial expertise with a modern, user-centric experience.'
+    },
+    {
       year: '2023 — 2025',
       role: 'Digital Mission Trainer',
       company: 'Christ University',
