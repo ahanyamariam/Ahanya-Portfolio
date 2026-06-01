@@ -194,6 +194,13 @@ export default function Portfolio() {
 
   const experiences = [
     {
+      year: '2026 — Present',
+      role: 'E-Commerce Solutions Engineer',
+      company: 'Daylight Space Oman',
+      description: 'Led the technical strategy and development for a premium e-commerce booking platform. Managed end-to-end project requirements, translated business needs into technical architecture, and engineered custom backend solutions including automated scheduling logic, prepaid voucher systems, and localized invoicing integrations.',
+      link: 'https://daylighspace.com/en/'
+    },
+    {
       year: '2026',
       role: 'Web developer and UI/UX designer',
       company: 'Grace Engineering LLC ',
