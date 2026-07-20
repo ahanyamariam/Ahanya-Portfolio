@@ -198,33 +198,38 @@ export default function Portfolio() {
       role: 'WordPress & WooCommerce Developer',
       company: 'Hena & Sidr, Oman (Remote)',
       description: 'Diagnosed and resolved backend issues on live WooCommerce stores, including inventory management, payment gateway synchronization, and checkout performance under high order volume. Led incident response for a compromised WordPress site and managed full-site migration to new hosting infrastructure, including DNS configuration, SSL troubleshooting, and zero-data-loss restoration. Implemented custom features such as loyalty point systems, product-specific shipping restrictions, and Arabic localization (RTL support, PDF invoice generation).',
-      link: 'https://organichenasidr.com/'
+      link: 'https://organichenasidr.com/',
+      skills: ['WordPress', 'WooCommerce', 'Hostinger', 'PHP']
     },
     {
       year: 'May 2026 — June 2026',
       role: 'E-Commerce Solutions Engineer',
       company: 'Daylight Space Oman',
       description: 'Led the technical strategy and development for a premium e-commerce booking platform. Managed end-to-end project requirements, translated business needs into technical architecture, and engineered custom backend solutions including automated scheduling logic, prepaid voucher systems, and localized invoicing integrations.',
-      link: 'https://daylighspace.com/en/'
+      link: 'https://daylighspace.com/en/',
+      skills: ['WordPress', 'WooCommerce', 'Bluehost', 'PHP']
     },
     {
       year: 'May 2026 - July 2026',
       role: 'Web developer and UI/UX designer',
       company: 'Grace Engineering LLC ',
       description: 'Handling the full-cycle web development for Grace Engineering LLC, from the initial UI/UX design and architecture to final technical deployment. I am responsible for building a high-performance platform that bridges their industrial expertise with a modern, user-centric experience.',
-      link: 'https://graceoman.com/'
+      link: 'https://graceoman.com/',
+      skills: ['GoDaddy', 'Figma']
     },
     {
       year: '2023 — 2025',
       role: 'Digital Mission Trainer',
       company: 'Christ University',
-      description: 'Conducted classes on computer science topics to non-computer science students, fostering digital literacy and empowering them with essential tech skills for the modern world.'
+      description: 'Conducted classes on computer science topics to non-computer science students, fostering digital literacy and empowering them with essential tech skills for the modern world.',
+      skills: ['Python', 'Generative AI', 'Instruction']
     },
     {
       year: '2024 — 2025',
       role: '3D Modeling Intern- Seed Money Research Project- Augmented Reality in Medical Education',
       company: 'Christ University',
-      description: 'Developed interactive visual components and front-end style assets for an AR-based medical education platform, enhancing user engagement and learning outcomes through immersive 3D experiences.'
+      description: 'Developed interactive visual components and front-end style assets for an AR-based medical education platform, enhancing user engagement and learning outcomes through immersive 3D experiences.',
+      skills: ['Blender']
     },
   ];
 
@@ -825,6 +830,21 @@ export default function Portfolio() {
           color: #777;
           line-height: 1.7;
         }
+        .experience-skills {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-top: 14px;
+        }
+        .experience-skill-tag {
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 11px;
+          letter-spacing: 0.02em;
+          padding: 5px 12px;
+          background: rgba(0,0,0,0.05);
+          color: #666;
+          border-radius: 100px;
+        }
         .experience-link {
           display: inline-flex;
           align-items: center;
@@ -1149,6 +1169,13 @@ export default function Portfolio() {
                       {exp.role} <span>at</span> {exp.company}
                     </h3>
                     <p className="experience-desc">{exp.description}</p>
+                    {exp.skills && (
+                      <div className="experience-skills">
+                        {exp.skills.map((skill, sIdx) => (
+                          <span key={sIdx} className="experience-skill-tag">{skill}</span>
+                        ))}
+                      </div>
+                    )}
                     {exp.link && (
                       <a href={exp.link} target="_blank" rel="noopener noreferrer" className="experience-link">
                         Visit Website <ArrowUpRight size={14} />
