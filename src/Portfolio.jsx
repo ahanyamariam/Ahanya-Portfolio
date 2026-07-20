@@ -69,6 +69,32 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: 'Inboxie',
+      image: '/assets/pictures/inboxie.png',
+      pageImageStyle: { maxWidth: '400px', margin: '0 auto 56px auto' },
+      description: 'An Action-Intelligent Email Client for Reducing Missed Follow-ups and Deadlines.',
+      details: 'Inboxie is a multi-provider email client that augments traditional email interfaces with an action-intelligence layer designed to reduce missed follow-ups, overlooked requests, and unmanaged deadlines. Rather than prioritizing chronological ordering, the system surfaces emails based on inferred intent, urgency, and required user action. The application emphasizes explainability, user control, and privacy-aware processing, enabling users to understand why an email is flagged and how prioritization decisions are made.',
+      repoUrl: 'https://github.com/ahanyamariam/Inboxie-Enhanced.git',
+      tags: ['Flutter/Dart', 'Firebase', 'Sqlite'],
+      media: [
+        {
+          src: '/assets/videos/inboxie-fullvideo.mp4',
+          isLoop: true,
+          style: { maxWidth: '320px', margin: '0 auto' },
+          desc: 'Inboxie identifies emails that require user action using a blend of rule-based and AI-assisted intent detection. By organizing messages into human-readable intents—such as "needs reply" or "waiting on others"—it helps prevent missed replies, follow-ups, and time-sensitive tasks. The application presents its prioritization decisions in an explainable and transparent manner, offering customizable labels and buckets that adapt to individual user workflows, all while maintaining strong privacy guarantees through configurable data storage modes.'
+        },
+        {
+          images: [
+            '/assets/pictures/inboxie-home.jpeg',
+            '/assets/pictures/profile.png',
+            '/assets/pictures/ai.png'
+          ],
+          desc: 'A modern interface showing the unified homepage, configurable user profiles, and AI intent detection overlays that prioritize emails effectively.'
+        }
+      ],
+      hideLiveSite: true
+    },
+    {
       title: 'Canteen Rush AI',
       image: '/assets/pictures/canteen-rush.png',
       description: 'AI-powered campus food ordering system.',
@@ -101,32 +127,6 @@ export default function Portfolio() {
       repoUrl: 'https://github.com/Anirudh-Gonnuri/Nurdle.git',
       tags: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       liveSiteUrl: 'https://nurdle.vercel.app/'
-    },
-    {
-      title: 'Inboxie',
-      image: '/assets/pictures/inboxie.png',
-      pageImageStyle: { maxWidth: '400px', margin: '0 auto 56px auto' },
-      description: 'An Action-Intelligent Email Client for Reducing Missed Follow-ups and Deadlines.',
-      details: 'Inboxie is a multi-provider email client that augments traditional email interfaces with an action-intelligence layer designed to reduce missed follow-ups, overlooked requests, and unmanaged deadlines. Rather than prioritizing chronological ordering, the system surfaces emails based on inferred intent, urgency, and required user action. The application emphasizes explainability, user control, and privacy-aware processing, enabling users to understand why an email is flagged and how prioritization decisions are made.',
-      repoUrl: 'https://github.com/ahanyamariam/Inboxie-Enhanced.git',
-      tags: ['Flutter/Dart', 'Firebase', 'Sqlite'],
-      media: [
-        {
-          src: '/assets/videos/inboxie-fullvideo.mp4',
-          isLoop: true,
-          style: { maxWidth: '320px', margin: '0 auto' },
-          desc: 'Inboxie identifies emails that require user action using a blend of rule-based and AI-assisted intent detection. By organizing messages into human-readable intents—such as "needs reply" or "waiting on others"—it helps prevent missed replies, follow-ups, and time-sensitive tasks. The application presents its prioritization decisions in an explainable and transparent manner, offering customizable labels and buckets that adapt to individual user workflows, all while maintaining strong privacy guarantees through configurable data storage modes.'
-        },
-        {
-          images: [
-            '/assets/pictures/inboxie-home.jpeg',
-            '/assets/pictures/profile.png',
-            '/assets/pictures/ai.png'
-          ],
-          desc: 'A modern interface showing the unified homepage, configurable user profiles, and AI intent detection overlays that prioritize emails effectively.'
-        }
-      ],
-      hideLiveSite: true
     },
     {
       title: 'Hygieia',
