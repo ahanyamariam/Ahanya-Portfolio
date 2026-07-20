@@ -201,14 +201,14 @@ export default function Portfolio() {
       link: 'https://organichenasidr.com/'
     },
     {
-      year: '2026 — Present',
+      year: 'May 2026 — June 2026',
       role: 'E-Commerce Solutions Engineer',
       company: 'Daylight Space Oman',
       description: 'Led the technical strategy and development for a premium e-commerce booking platform. Managed end-to-end project requirements, translated business needs into technical architecture, and engineered custom backend solutions including automated scheduling logic, prepaid voucher systems, and localized invoicing integrations.',
       link: 'https://daylighspace.com/en/'
     },
     {
-      year: '2026',
+      year: 'May 2026 - July 2026',
       role: 'Web developer and UI/UX designer',
       company: 'Grace Engineering LLC ',
       description: 'Handling the full-cycle web development for Grace Engineering LLC, from the initial UI/UX design and architecture to final technical deployment. I am responsible for building a high-performance platform that bridges their industrial expertise with a modern, user-centric experience.',
