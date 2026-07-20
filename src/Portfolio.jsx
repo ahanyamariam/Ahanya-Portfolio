@@ -194,6 +194,13 @@ export default function Portfolio() {
 
   const experiences = [
     {
+      year: 'Jul 2026 — Jul 2026',
+      role: 'WordPress & WooCommerce Developer',
+      company: 'Hena & Sidr, Oman (Remote)',
+      description: 'Diagnosed and resolved backend issues on live WooCommerce stores, including inventory management, payment gateway synchronization, and checkout performance under high order volume. Led incident response for a compromised WordPress site and managed full-site migration to new hosting infrastructure, including DNS configuration, SSL troubleshooting, and zero-data-loss restoration. Implemented custom features such as loyalty point systems, product-specific shipping restrictions, and Arabic localization (RTL support, PDF invoice generation).',
+      link: 'https://organichenasidr.com/'
+    },
+    {
       year: '2026 — Present',
       role: 'E-Commerce Solutions Engineer',
       company: 'Daylight Space Oman',
